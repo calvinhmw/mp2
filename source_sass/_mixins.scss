@@ -1,1 +1,30 @@
 // Insert your mixins
+
+
+@mixin align-vertically($position: relative, $distance: 50%) {
+  position: $position;
+  top: $distance;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+
+@mixin scale-element-on-hover($percentage) {
+  -webkit-transform: scale($percentage);
+  -moz-transform: scale($percentage);
+  -ms-transform: scale($percentage);
+  -o-transform: scale($percentage);
+  transform: scale($percentage);
+}
+
+@mixin transition-feature($property, $duration, $timing-function) {
+  -webkit-transition: $property $duration $timing-function;
+  -moz-transition: $property $duration $timing-function;
+  -o-transition: $property $duration $timing-function;
+  transition: $property $duration $timing-function;
+}
+
+
