@@ -295,7 +295,32 @@
 </section>
 
 
-<section id="contact"></section>
+<section id="contact" class="row full-width align-middle align-center">
+    <video id="background-video" autoplay muted preload=auto loop>
+        <source src="data/videos/background_video.mp4" type="video/mp4">
+    </video>
+    <!--http://codepen.io/rafibomb/pen/LDEfC-->
+
+    <div id="contact-form" class="small-4 columns">
+        <div id="contact-header" class="columns small-12 centered b-spacing-10">
+            <h4>Thank you for visiting my page! Feel free to leave me a message if you have any question.</h4>
+        </div>
+        <form class="columns small-12" id="form-area" data-abide>
+            <h4>Name</h4>
+            <input type="text" id="input-name" placeholder="Full Name" required>
+
+            <h4>Email</h4>
+            <input type="email" id="input-email" placeholder="username@address.com" required>
+
+            <h4>Message</h4>
+            <textarea id="input-msg" placeholder="Enter message here" required></textarea>
+
+            <input type="submit" class="nice blue radius button" value="Send"></button></a>
+        </form>
+    </div>
+
+
+</section>
 
 
 <footer id="footer-home" class="row full-width align-middle align-center section-header">

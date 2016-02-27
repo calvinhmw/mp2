@@ -2,14 +2,6 @@
 @import url('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
-//@include foundation-flex-grid;
-
-//
-//* {
-//  @include foundation-everything(true);
-//
-//}
-
 h1, h2, h3, h3, h4, h5, p, li {
   font-family: $font-secondary;
 }
@@ -20,7 +12,7 @@ section {
   overflow: hidden;
   padding-top: 4%;
   padding-bottom: 4%;
-  border: 2px solid black;
+  //border: 2px solid black;
   background-color: azure;
 }
 
@@ -138,6 +130,29 @@ section {
   }
 }
 
+//background video referred from:
+//http://codepen.io/anon/pen/solgw
+#contact {
+  background-color: transparent;
+  video {
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+    top: -50px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -100;
+    opacity: 0.6;
+  }
+
+  form {
+    #input-name, #input-email, #input-msg {
+      border: 1px solid black;
+      background-color: rgba(0, 0, 0, 0);
+    }
+  }
+}
 
 #cover-whole-page {
   position: fixed;
@@ -287,10 +302,13 @@ section {
   margin-bottom: 8%;
 }
 
+.b-spacing-9 {
+  margin-bottom: 9%;
+}
 
-
-
-
+.b-spacing-10 {
+  margin-bottom: 10%;
+}
 
 //carousel animation
 .carousel-content:not(.active) {
@@ -300,44 +318,44 @@ section {
 @keyframes go-right {
   0% {
     opacity: 1;
-    //transform: translateX(0);
+    transform: translateX(0);
   }
   100% {
     opacity: 0;
-    //transform: translateX(30%);
+    transform: translateX(30%);
   }
 }
 
 @keyframes go-left {
   0% {
     opacity: 1;
-    //transform: translateX(0);
+    transform: translateX(0);
   }
   100% {
     opacity: 0;
-    //transform: translateX(-30%);
+    transform: translateX(-30%);
   }
 }
 
 @keyframes left-arrive {
   0% {
     opacity: 0;
-    //transform: translateX(-30%);
+    transform: translateX(-30%);
   }
   100% {
     opacity: 1;
-    //transform: translateX(0);
+    transform: translateX(0);
   }
 }
 
 @keyframes right-arrive {
   0% {
     opacity: 0;
-    //transform: translateX(30%);
+    transform: translateX(30%);
   }
   100% {
     opacity: 1;
-    //transform: translateX(0);
+    transform: translateX(0);
   }
 }
 
@@ -365,34 +383,3 @@ section {
   animation: right-arrive 0.5s;
 }
 
-//.slick-slide {
-//  [dir="rtl"] & {
-//    float: right;
-//  }
-//  //img {
-//  //  display: block;
-//  //}
-//  &.slick-loading img {
-//    display: none;
-//  }
-//
-//  display: none;
-//
-//  &.dragging img {
-//    pointer-events: none;
-//  }
-//
-//  .slick-initialized & {
-//    display: block;
-//  }
-//
-//  .slick-loading & {
-//    visibility: hidden;
-//  }
-//
-//  .slick-vertical & {
-//    display: block;
-//    height: auto;
-//    border: 1px solid transparent;
-//  }
-//}
