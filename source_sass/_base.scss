@@ -22,12 +22,11 @@ section {
   max-width: 100%;
   #nav-bar {
     position: fixed;
-    height: 8%;
+    //height: 8%;
     left: 0;
     top: 0;
-    border-bottom: 2px solid black;
     z-index: 1000;
-    div div {
+    .nav-anchor {
       text-align: center;
       margin-right: 2%;
       margin-left: 2%;
@@ -35,6 +34,10 @@ section {
       text-transform: uppercase;
       font-family: $font-secondary;
       border-radius: 10px;
+    }
+    .nav-anchor:hover {
+      cursor: pointer;
+      color: orange;
     }
   }
 
@@ -180,10 +183,26 @@ section {
   }
 }
 
+.navbar-visible {
+  background-color: antiquewhite;
+}
+
+.navbar-invisible {
+  background-color: transparent;
+}
+
+.navbar-normal {
+  height: 10%;
+}
+
+.navbar-small {
+  height: 6%;
+}
+
 .section-header {
   position: relative;
   overflow: hidden;
-  border: 2px solid black;
+  //border: 2px solid black;
 }
 
 .section-title {

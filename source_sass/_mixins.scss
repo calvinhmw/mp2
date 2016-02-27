@@ -37,3 +37,12 @@
 }
 
 
+#nav-bar, #nav-bar .nav-anchor{
+  -moz-transition: all 0.5s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+
+
