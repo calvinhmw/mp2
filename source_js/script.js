@@ -8,9 +8,9 @@ $(document).ready(function () {
     var newheight = $(window).height();
     $("#home").css({"height": newheight, "width": newwidth});
 
-    $("section").css({"min-height": 0.8 * $(window).height()});
+    $("section").css({"min-height": 0.9 * $(window).height()});
     $(".section-header").css({"min-height": 0.2 * $(window).height()});
-    $("#contact").css({"min-height": 0.9 * $(window).height()});
+    //$("#contact").css({"min-height": 0.9 * $(window).height()});
 
     animate_carousel();
     smooth_scroll();
