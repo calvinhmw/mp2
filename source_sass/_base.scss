@@ -10,12 +10,16 @@
 //
 //}
 
+h1, h2, h3, h3, h4, h5, p, li {
+  font-family: $font-secondary;
+}
+
 section {
   position: relative;
   width: 100%;
   overflow: hidden;
-  padding-top: 5%;
-  padding-bottom: 5%;
+  padding-top: 4%;
+  padding-bottom: 4%;
   border: 2px solid black;
   background-color: azure;
 }
@@ -46,7 +50,7 @@ section {
     @include align-vertically(absolute);
     //border: 2px solid black;
     text-transform: uppercase;
-    font-family: $font-secondary;
+    //font-family: $font-secondary;
 
     #name-banner {
       div {
@@ -78,7 +82,6 @@ section {
   }
 }
 
-
 #home:before {
   content: ' ';
   display: block;
@@ -87,7 +90,7 @@ section {
   top: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.5;
+  opacity: 0.7;
   background: url(../data/pics/campus.jpg) no-repeat center center fixed;
   -ms-background-size: cover;
   -o-background-size: cover;
@@ -95,6 +98,44 @@ section {
   -webkit-background-size: cover;
   background-size: cover;
   z-index: -1000;
+}
+
+#about {
+  #profile-container {
+    margin-top: 4%;
+    #profile-pic {
+      border-radius: 50%;
+    }
+  }
+  #about-intro {
+    margin-top: 5%;
+  }
+}
+
+#projects {
+  #arrow-left, #arrow-right {
+    font-size: 3em;
+  }
+
+  .carousel {
+    overflow: hidden;
+    .carousel-content img:hover {
+      cursor: pointer;
+      opacity: 0.4;
+    }
+  }
+}
+
+#skills {
+  div {
+    //border: 1px dashed blue;
+  }
+  #python-logo, #c-logo, #html-logo, #jquery-logo, #tex-logo, #ruby-logo {
+    @include scale-element(0.7);
+  }
+  #java-logo, #matlab-logo {
+    @include scale-element(0.9);
+  }
 }
 
 
@@ -113,6 +154,45 @@ section {
   }
 }
 
+#footer-home {
+  position: relative;
+  #footer-content {
+    font-family: $font-secondary;
+    h4 {
+      text-transform: uppercase;
+      text-align: center;
+    }
+  }
+}
+
+.section-header {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid black;
+}
+
+.section-title {
+  letter-spacing: 0.15em;
+}
+
+.section-header:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  background: url(../data/pics/campus.jpg) no-repeat center center fixed;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  z-index: -1000;
+}
+
 .navbar-position-indicator {
   border: 2px solid black;
 }
@@ -126,3 +206,193 @@ section {
   width: 60%;
   max-width: 60%;
 }
+
+.centered {
+  text-align: center;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.uppercased {
+  text-transform: uppercase;
+}
+
+.t-spacing-1 {
+  margin-top: 1%;
+}
+
+.t-spacing-2 {
+  margin-top: 2%;
+}
+
+.t-spacing-3 {
+  margin-top: 3%;
+}
+
+.t-spacing-4 {
+  margin-top: 4%;
+}
+
+.t-spacing-5 {
+  margin-top: 5%;
+}
+
+.t-spacing-6 {
+  margin-top: 6%;
+}
+
+.t-spacing-7 {
+  margin-top: 7%;
+}
+
+.t-spacing-8 {
+  margin-top: 8%;
+}
+
+.b-spacing-1 {
+  margin-bottom: 1%;
+}
+
+.b-spacing-2 {
+  margin-bottom: 2%;
+}
+
+.b-spacing-3 {
+  margin-bottom: 3%;
+}
+
+.b-spacing-4 {
+  margin-bottom: 4%;
+}
+
+.b-spacing-5 {
+  margin-bottom: 5%;
+}
+
+.b-spacing-6 {
+  margin-bottom: 6%;
+}
+
+.b-spacing-7 {
+  margin-bottom: 7%;
+}
+
+.b-spacing-8 {
+  margin-bottom: 8%;
+}
+
+
+
+
+
+
+//carousel animation
+.carousel-content:not(.active) {
+  display: none;
+}
+
+@keyframes go-right {
+  0% {
+    opacity: 1;
+    //transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    //transform: translateX(30%);
+  }
+}
+
+@keyframes go-left {
+  0% {
+    opacity: 1;
+    //transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    //transform: translateX(-30%);
+  }
+}
+
+@keyframes left-arrive {
+  0% {
+    opacity: 0;
+    //transform: translateX(-30%);
+  }
+  100% {
+    opacity: 1;
+    //transform: translateX(0);
+  }
+}
+
+@keyframes right-arrive {
+  0% {
+    opacity: 0;
+    //transform: translateX(30%);
+  }
+  100% {
+    opacity: 1;
+    //transform: translateX(0);
+  }
+}
+
+.carousel-content.go-left {
+  -webkit-animation: go-left 0.5s;
+  -moz-animation: go-left 0.5s;
+  animation: go-left 0.5s;
+}
+
+.carousel-content.go-right {
+  -webkit-animation: go-right 0.5s;
+  -moz-animation: go-right 0.5s;
+  animation: go-right 0.5s;
+}
+
+.carousel-content.left-arrive {
+  -webkit-animation: left-arrive 0.5s;
+  -moz-animation: left-arrive 0.5s;
+  animation: left-arrive 0.5s;
+}
+
+.carousel-content.right-arrive {
+  -webkit-animation: right-arrive 0.5s;
+  -moz-animation: right-arrive 0.5s;
+  animation: right-arrive 0.5s;
+}
+
+//.slick-slide {
+//  [dir="rtl"] & {
+//    float: right;
+//  }
+//  //img {
+//  //  display: block;
+//  //}
+//  &.slick-loading img {
+//    display: none;
+//  }
+//
+//  display: none;
+//
+//  &.dragging img {
+//    pointer-events: none;
+//  }
+//
+//  .slick-initialized & {
+//    display: block;
+//  }
+//
+//  .slick-loading & {
+//    visibility: hidden;
+//  }
+//
+//  .slick-vertical & {
+//    display: block;
+//    height: auto;
+//    border: 1px solid transparent;
+//  }
+//}

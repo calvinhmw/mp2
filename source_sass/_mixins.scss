@@ -28,3 +28,12 @@
 }
 
 
+@mixin scale-element($percentage) {
+  -webkit-transform: scale($percentage);
+  -moz-transform: scale($percentage);
+  -ms-transform: scale($percentage);
+  -o-transform: scale($percentage);
+  transform: scale($percentage);
+}
+
+
