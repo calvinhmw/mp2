@@ -10,6 +10,7 @@ $(document).ready(function () {
 
     $("section").css({"min-height": 0.8 * $(window).height()});
     $(".section-header").css({"min-height": 0.2 * $(window).height()});
+    $("#contact").css({"min-height": 0.9 * $(window).height()});
 
     animate_carousel();
     smooth_scroll();
@@ -61,6 +62,9 @@ function animate_carousel() {
 function smooth_scroll() {
     $("#nav-bar .nav-anchor").click(function (event) {
         var scrollTo = $(this).attr('id').split('-')[2];
+        if(scrollTo == "education" || scrollTo == "projects" || scrollTo=="skills") {
+            scrollTo = scrollTo+"-header";
+        }
         //console.log(scrollTo);
         //$('html body')
         $root.animate({
@@ -78,9 +82,9 @@ function navbar_effect_on_scroll() {
         var bannerPos = $('#intro-banner').offset().top;
         var homePos = $('#home').offset().top;
         var aboutPos = $('#about').offset().top;
-        var eduPos = $('#education').offset().top;
-        var projectsPos = $('#projects').offset().top;
-        var skillsPos = $('#skills').offset().top;
+        var eduPos = $('#education-header').offset().top;
+        var projectsPos = $('#projects-header').offset().top;
+        var skillsPos = $('#skills-header').offset().top;
         var contactPos = $('#contact').offset().top;
         //console.log('curpos: '+curPos);
         //console.log('home: '+ homePos);
@@ -106,39 +110,39 @@ function navbar_effect_on_scroll() {
 
 
         if (curPos >= homePos - 1 && curPos < aboutPos - 1) {
-            $('#scroll-to-home').addClass('navbar-position-indicator');
+            $('#scroll-to-home a').addClass('navbar-position-indicator');
         } else {
-            $('#scroll-to-home').removeClass('navbar-position-indicator');
+            $('#scroll-to-home a').removeClass('navbar-position-indicator');
         }
 
         if (curPos >= aboutPos - 1 && curPos < eduPos - 1) {
-            $('#scroll-to-about').addClass('navbar-position-indicator');
+            $('#scroll-to-about a').addClass('navbar-position-indicator');
         } else {
-            $('#scroll-to-about').removeClass('navbar-position-indicator');
+            $('#scroll-to-about a').removeClass('navbar-position-indicator');
         }
 
         if (curPos >= eduPos - 1 && curPos < projectsPos - 1) {
-            $('#scroll-to-education').addClass('navbar-position-indicator');
+            $('#scroll-to-education a').addClass('navbar-position-indicator');
         } else {
-            $('#scroll-to-education').removeClass('navbar-position-indicator');
+            $('#scroll-to-education a').removeClass('navbar-position-indicator');
         }
 
         if (curPos >= projectsPos - 1 && curPos < skillsPos - 1) {
-            $('#scroll-to-projects').addClass('navbar-position-indicator');
+            $('#scroll-to-projects a').addClass('navbar-position-indicator');
         } else {
-            $('#scroll-to-projects').removeClass('navbar-position-indicator');
+            $('#scroll-to-projects a').removeClass('navbar-position-indicator');
         }
 
         if (curPos >= skillsPos - 1 && curPos < contactPos - 1) {
-            $('#scroll-to-skills').addClass('navbar-position-indicator');
+            $('#scroll-to-skills a').addClass('navbar-position-indicator');
         } else {
-            $('#scroll-to-skills').removeClass('navbar-position-indicator');
+            $('#scroll-to-skills a').removeClass('navbar-position-indicator');
         }
 
         if (curPos >= contactPos - 1) {
-            $('#scroll-to-contact').addClass('navbar-position-indicator');
+            $('#scroll-to-contact a').addClass('navbar-position-indicator');
         } else {
-            $('#scroll-to-contact').removeClass('navbar-position-indicator');
+            $('#scroll-to-contact a').removeClass('navbar-position-indicator');
         }
 
     });
@@ -148,10 +152,4 @@ function navbar_effect_on_scroll() {
 
 $(window).load(function () {
     $("#cover-whole-page").hide();
-
-    //$('#background-video, #nav-bar').removeClass('prevent-animation').addClass('animation-generic');
-    //$("#banner-text-1 span:first-child").removeClass('prevent-animation').addClass('animation-hi');
-    //$("#banner-text-1 span:nth-child(2)").removeClass('prevent-animation').addClass('animation-mingwei');
-    //$('#banner-text-2').removeClass('prevent-animation').addClass('animation-welcome');
-    //$('#go-down-about').removeClass('prevent-animation').addClass('animation-go-down-about');
 });
