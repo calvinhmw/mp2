@@ -31,7 +31,7 @@ section {
       margin-bottom: 0;
       text-transform: uppercase;
       font-family: $font-secondary;
-      a{
+      a {
         text-decoration: none;
         padding: 0.5em;
         color: #0a0a0a;
@@ -39,6 +39,14 @@ section {
       a:hover {
         cursor: pointer;
         color: orange;
+      }
+    }
+    #dropdown-nav {
+      font-family: $font-primary;
+      text-transform: uppercase;
+      color: black;
+      a {
+        color: black;
       }
     }
   }
@@ -109,6 +117,12 @@ section {
   }
 }
 
+#profile-container {
+  @include breakpoint(small down) {
+    display: none;
+  }
+}
+
 #projects {
   #arrow-left, #arrow-right {
     font-size: 3em;
@@ -156,6 +170,32 @@ section {
       border: 1px solid black;
       background-color: rgba(0, 0, 0, 0);
     }
+  }
+}
+
+#background-video {
+  @include breakpoint(medium down) {
+    display: none;
+  }
+}
+
+#contact:before {
+  @include breakpoint(medium down) {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    background: url(../data/pics/campus.jpg) no-repeat center center fixed;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    z-index: -1000;
   }
 }
 
@@ -240,7 +280,7 @@ section {
 }
 
 .navbar-position-indicator {
-    border: 1px solid black;
+  border: 1px solid black;
 }
 
 .row.full-width {

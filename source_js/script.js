@@ -17,6 +17,27 @@ $(document).ready(function () {
     navbar_effect_on_scroll();
 });
 
+
+$(window).resize(function () {
+    var newWidth = $(window).width();
+    var newHeight = $(window).height();
+
+    $("#home").css({"height": newHeight, "width": newWidth});
+
+    var homeWidth = $("#home").width();
+    var homeHeight = $("#home").height();
+
+    //$("#background-video").css({"width": homeWidth, "height": homeWidth / videoAsRatio});
+    //var videoHeight = $("#background-video").height();
+    //$("#home").css({"height": videoHeight});
+
+    $("section").css({"min-height": 0.9 * $(window).height()});
+    $(".section-header").css({"min-height": 0.2 * $(window).height()});
+
+    //$("#footer-home").css({"min-height": 0.15 * $(window).height()});
+});
+
+
 function animate_carousel() {
     var num_carousels = $(".carousel-content").length;
     for(var i=0; i<num_carousels; i++) {

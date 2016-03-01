@@ -9,6 +9,7 @@
     <!-- Stylesheets -->
     <!--<link rel="stylesheet" href="./foundation6_lib/css/foundation.css">-->
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="icon" type="image/ico" href="data/pics/profile_circle.png"/>
     <!--<link rel="stylesheet" type="text/css" href="./lib/slick-carousel/slick/slick.css"/>-->
     <!--<link rel="stylesheet" type="text/css" href="./lib/slick-carousel/slick/slick-theme.css"/>-->
 </head>
@@ -18,9 +19,8 @@
 
 <header id="home">
 
-
     <nav id="nav-bar" class="row full-width align-center navbar-invisible navbar-normal">
-        <div class="row medium-width align-center align-middle medium-unstack">
+        <div class="row show-for-medium medium-width align-center align-middle medium-unstack">
             <div id="scroll-to-home" class="columns nav-anchor"><a class="navbar-position-indicator">home</a></div>
             <div id="scroll-to-about" class="columns nav-anchor"><a>about</a></div>
             <div id="scroll-to-education" class="columns nav-anchor"><a>education</a></div>
@@ -28,18 +28,22 @@
             <div id="scroll-to-skills" class="columns nav-anchor"><a>skills</a></div>
             <div id="scroll-to-contact" class="columns nav-anchor"><a>contact</a></div>
         </div>
+
+        <ul id="dropdown-nav" class="row align-center align-middle dropdown menu show-for-small-only"
+            data-dropdown-menu>
+            <li>
+                <a href="#">Menu</a>
+                <ul class="menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education-header">Education</a></li>
+                    <li><a href="#projects-header">Projects</a></li>
+                    <li><a href="#skills-header">Skills</a></li>
+                    <li><a href="#contact">contact</a></li>
+                </ul>
+            </li>
+        </ul>
     </nav>
-
-
-    <!--<nav id="nav-bar" class="row full-width align-center align-middle navbar-invisible navbar-normal">-->
-    <!--<div id="scroll-to-home" class="columns navbar-position-indicator"><h5 class="nav-anchor">-->
-    <!--home</h5></div>-->
-    <!--<div id="scroll-to-about" class="columns"><h5 class="nav-anchor">about</h5></div>-->
-    <!--<div id="scroll-to-education" class="columns"><h5 class="nav-anchor">education</h5></div>-->
-    <!--<div id="scroll-to-projects" class="columns"><h5 class="nav-anchor">projects</h5></div>-->
-    <!--<div id="scroll-to-skills" class="columns"><h5 class="nav-anchor">skills</h5></div>-->
-    <!--<div id="scroll-to-contact" class="columns"><h5 class="nav-anchor">contact</h5></div>-->
-    <!--</nav>-->
 
 
     <div id="intro-banner" class="row full-width">
@@ -56,47 +60,49 @@
 
 
         <div id="social-icon" class="row full-width align-middle align-center">
-            <div class="columns small-3 medium-1"><a href="https://www.facebook.com/mingwei.hu.5" target="_blank"><i
+            <div class="columns small-10 medium-1"><a href="https://www.facebook.com/mingwei.hu.5"
+                                                      target="_blank"><i
                     class="fa fa-facebook-square"></i></a></div>
-            <div class="columns small-3 medium-1"><a href="https://twitter.com/calvinmwhu" target="_blank"><i
+            <div class="columns small-10 medium-1"><a href="https://twitter.com/calvinmwhu" target="_blank"><i
                     class="fa fa-twitter-square"></i></a>
             </div>
-            <div class="columns small-3 medium-1"><a href="https://www.linkedin.com/in/calvinmwhu" target="_blank"><i
+            <div class="columns small-10 medium-1"><a href="https://www.linkedin.com/in/calvinmwhu" target="_blank"><i
                     class="fa fa-linkedin-square"></i></a></div>
-            <div class="columns small-3 medium-1"><a href="https://github.com/calvinmwhu" target="_blank"><i
+            <div class="columns small-10 medium-1"><a href="https://github.com/calvinmwhu" target="_blank"><i
                     class="fa fa-github-square"></i></a></div>
-            <div class="columns small-3 medium-1"><a href="https://www.reddit.com/r/UIUC/" target="_blank"><i
+            <div class="columns small-10 medium-1"><a href="https://www.reddit.com/r/UIUC/" target="_blank"><i
                     class="fa fa-reddit-square"></i></a>
             </div>
-            <div class="small-3 medium-1"><a href="https://www.youtube.com/" target="_blank"><i
+            <div class="small-10 medium-1"><a href="https://www.youtube.com/" target="_blank"><i
                     class="fa fa-youtube-square"></i></a></div>
         </div>
     </div>
 
-
 </header>
 
 
-<section id="about">
-    <div class="row full-width align-center">
-        <div class="columns small-4"><h3 class="centered uppercased section-title">#About</h3></div>
+<section id="about" class="row full-width align-center align-middle">
+    <div class="columns small-4 medium-12 align-center align-middle">
+        <h3 class="centered uppercased section-title">#About</h3>
     </div>
-    <div class="row full-width align-center" id="profile-container">
-        <div class="columns small-12 medium-1">
-            <img src="data/pics/profile_square.png" class="centered" id="profile-pic" alt="profile">
+    <div class="columns small-8 medium-12 align-center align-middle">
+        <div class="row full-width align-center show-for-medium" id="profile-container">
+            <div class="columns small-12 medium-2">
+                <img src="data/pics/profile_square.png" class="centered" id="profile-pic" alt="profile">
+            </div>
         </div>
-    </div>
 
-    <div class="row full-width align-center" id="about-intro">
-        <div class="columns small-12 medium-5">
-            <p class="centered">
-                My name is Mingwei Hu and I am currently a first year master student at
-                Department of Computer Science, University of Illinois at Urbana-Champaign (UIUC). My research
-                interest includes Computer Networking and Multimedia Systems. My advisor
-                is professor <a href="https://www.ece.illinois.edu/directory/profile/klara" target="_blank">Klara
-                Nahrstedt</a>. </p>
-            <p class="centered">In May 2015, I graduated with a CS Bachelor's degree with High Honors from
-                UIUC.</p>
+        <div class="row full-width align-center" id="about-intro">
+            <div class="columns small-12 medium-5">
+                <p class="centered">
+                    My name is Mingwei Hu and I am currently a first year master student at
+                    Department of Computer Science, University of Illinois at Urbana-Champaign (UIUC). My research
+                    interest includes Computer Networking and Multimedia Systems. My advisor
+                    is professor <a href="https://www.ece.illinois.edu/directory/profile/klara" target="_blank">Klara
+                    Nahrstedt</a>. </p>
+                <p class="centered">In May 2015, I graduated with a CS Bachelor's degree with High Honors from
+                    UIUC.</p>
+            </div>
         </div>
     </div>
 </section>
@@ -112,13 +118,13 @@
     <div class="columns small-12 align-middle">
 
         <div class="row full-width align-center align-top b-spacing-5">
-            <div class="columns small-12 medium-2 large-2 right">
+            <div class="columns show-for-medium small-12 medium-4 large-2 right">
                 <img src="data/pics/uofi.png" class="right" alt="uiuc">
             </div>
             <div class="columns small-12 medium-8 large-6 left">
                 <h3>University of Illinois at Urbana-Champaign</h3>
                 <p>Master of Science in Computer Science, May 2017</p>
-                <ul class="">
+                <ul>
                     <li>
                         Research interest: Computer Networking, Multimedia Systems
                     </li>
@@ -132,7 +138,7 @@
         </div>
 
         <div class="row full-width align-center align-top">
-            <div class="columns small-12 medium-2 large-2 right">
+            <div class="columns show-for-medium small-12 medium-4 large-2 right">
                 <img src="data/pics/uofi.png" class="right" alt="uiuc">
             </div>
             <div class="columns small-12 medium-8 large-6 left">
@@ -167,7 +173,7 @@
 
 <section id="projects" class="row full-width align-center align-middle">
 
-    <div class="columns small-1 right carousel-arrow" id="carousel-l-arrow"><a id="arrow-left"
+    <div class="columns small-12 medium-1 right carousel-arrow" id="carousel-l-arrow"><a id="arrow-left"
                                                                                class="fa fa-angle-left"></a></div>
 
     <div class="columns small-10 carousel">
@@ -258,7 +264,7 @@
 
 
     </div>
-    <div class="columns small-1 carousel-arrow" id="carousel-r-arrow"><a id="arrow-right" class="fa fa-angle-right"></a>
+    <div class="columns small-12 medium-1 carousel-arrow" id="carousel-r-arrow"><a id="arrow-right" class="fa fa-angle-right"></a>
     </div>
 
 </section>
@@ -269,7 +275,7 @@
 </div>
 
 <section id="skills" class="row full-width align-center align-middle">
-    <div class="columns small-6">
+    <div class="columns medium-6 show-for-medium">
         <div class="row small-12 align-center align-middle">
             <div class="columns small-6 medium-4">
                 <img src="data/pics/cpp_logo.png" id="cpp-logo" alt="cpp">
@@ -304,6 +310,22 @@
             </div>
         </div>
     </div>
+    <ul id="dropdown-skills" class="row align-center align-middle dropdown menu show-for-small-only" data-dropdown-menu>
+        <li>
+            <a>Click here to see a list of my skills</a>
+            <ul class="menu">
+                <li>C++</li>
+                <li>java</li>
+                <li>python</li>
+                <li>C</li>
+                <li>html</li>
+                <li>jquery</li>
+                <li>matlab</li>
+                <li>tex</li>
+                <li>ruby</li>
+            </ul>
+        </li>
+    </ul>
 </section>
 
 
@@ -313,7 +335,7 @@
     </video>
     <!--http://codepen.io/rafibomb/pen/LDEfC-->
 
-    <div id="contact-form" class="small-12 medium-4 columns">
+    <div id="contact-form" class="small-10 medium-6 large-4 columns">
         <div id="contact-header" class="columns small-12 centered b-spacing-10">
             <h4>Thank you for visiting my page! Feel free to leave me a message if you have any question.</h4>
         </div>

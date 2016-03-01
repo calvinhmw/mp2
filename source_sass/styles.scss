@@ -1,11 +1,11 @@
 @import "compass";
+@import '../public/foundation6_lib/scss/foundation.scss';
 
 @import "variables";
 @import "mixins";
 @import "base";
-@import '../public/foundation6_lib/scss/foundation.scss';
-@import "../public/lib/slick-carousel/slick/slick";
-@import "../public/lib/slick-carousel/slick/slick-theme";
+//@import "../public/lib/slick-carousel/slick/slick";
+//@import "../public/lib/slick-carousel/slick/slick-theme";
 
 /*
   NOTE: Do not touch this file. Write the bulk of your custom styles
